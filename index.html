@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Che🍒y Player</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1 class="cherry">Che🍒y Player</h1>
+        <div class="music-container play">
+            <!-- song info -->
+            <div class="music-info">
+                <h4 id="title"> Bounce </h4>
+                <div class="progress-container">
+                    <div class="progress"></div>
+                </div>
+            </div>
+            <!-- audio -->
+            <audio src="./Music/Bounce.mp3" id="audio"></audio>
+            <div class="image-container">
+                <img src="./images/teenage.jpg" alt="music-cover" id="cover">
+            </div>
+            <!-- buttons prev play next -->
+            <div class="navigation">
+                <button id="prev" class="action-btn">
+                    <i class="fas fa-backward"></i>
+                </button>
+                <button id="play" class="action-btn action-btn-big">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button id="next" class="action-btn">
+                    <i class="fas fa-forward"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="happy-birthday">
+            <div class="one">
+                <h1 class="nan">Happy Birthday NAN!</h1>
+                <div class="rose"><span> 🌹 🎉 🎂</span></div>
+            </div>
+
+            <h2>You are my special person </h2>
+            <div class="special">
+                <div class="rolling-balls">
+                    <h5 class="ball0">💖</h5>
+                    <h5 class="ball1">😍</h5>
+                    <h5 class="ball2">🎈</h5>
+                    <h5 class="ball3">🎁</h5>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
