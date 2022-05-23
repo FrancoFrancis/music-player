@@ -29,7 +29,7 @@ function loadSong(song) {
 };
 
 // play song
-function playSong() {                                 
+function playSong() {
     musicContainer.classList.add('play');
     playBtn.querySelector('i.fas').classList.remove('fa-play'); //changes the play button
     playBtn.querySelector('i.fas').classList.add('fa-pause');
@@ -63,7 +63,7 @@ function prevSong() {
 
 // next song
 function nextSong() {
-    songIndex++                            // increment song index by 1
+    songIndex++
 
     if (songIndex > songs.length - 1) {   //checks to see if we are at the end. Acessing an array from the end
         songIndex = 0                     // set the song index to the first song which is zero
@@ -78,7 +78,7 @@ function nextSong() {
 
 function updateProgress(e) {                  // function takes in a event object   (e)
     const { duration, currentTime } = e.srcElement //  console.log(e.srcElement.currentTime) we get the audio tag then get the song timing updated in real time on the console 
-    const progressPercent = (currentTime / duration) * 100  
+    const progressPercent = (currentTime / duration) * 100
     progress.style.width = `${progressPercent}%`     //width of progress set to whatever progress Perscent is 
 }
 
@@ -89,16 +89,16 @@ function setProgress(e) {
     const clickX = e.offsetX
     const duration = audio.duration
 
-    audio.currentTime = (clickX / width) * duration 
+    audio.currentTime = (clickX / width) * duration
 }
 
 
 
 //Event listeners
 playBtn.addEventListener('click', () => {
-    
+
     const isPlaying = musicContainer.classList.contains('play'); // we set the isPlaying to musicContainer.classList and we wanna check if the classlist contains class of play
-    
+
 
     if (isPlaying) {
         pauseSong()
@@ -121,6 +121,16 @@ progressContainer.addEventListener('click', setProgress);
 //when song ends
 audio.addEventListener('ended', nextSong);  // listen for ended
 
+
+// alert wish
+const wish = document.querySelector('#tap-wish');
+
+wish.addEventListener('click', () => {
+
+    alert("Hey!🌹👋🏾 I wish you a happy birthday, and the all the good things of life🎉🤍 ")
+    return wish;
+
+});
 
 
 //Learnt about the HTML 5 audio API

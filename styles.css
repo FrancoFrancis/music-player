@@ -1,12 +1,11 @@
-
 * {
     box-sizing: border-box;
 }
 
 :root {
     --dark: #210921;
-    --darker:#230123;
-    --darkest:#190119;
+    --darker: #230123;
+    --darkest: #190119;
     --black: #0b0c0c;
     --light: #fff;
 }
@@ -15,11 +14,11 @@ body {
     height: 100vh;
     margin: 0;
     font-family: sans-serif;
-    background:#200320;
+    background: #200320;
     /* background:var(--darker); */
     margin-top: 160px;
-    margin-bottom: 160px;
-/* 
+    /* margin-bottom: 160px; */
+    /* 
     background-image: linear-gradient(0deg,
     rgb(255, 163, 226) 23.8%,
     rgb(244, 4, 144) 92%);  */
@@ -31,20 +30,27 @@ body {
     justify-content: center;
 }
 
+.wrapper {
+    padding-top: 100px;
+    /* margin-top: 300px; */
+}
+
 
 .cherry {
-    margin-top: 70px;
+    /* margin-top: 70px; */
+    margin-left: 100px;
 }
 
 
 .music-container {
     background-color: #190119;
     color: rgb(8, 8, 8);
-    box-shadow:0 20px 20px 0 #0e070e; /*dark*/
+    box-shadow: 0 20px 20px 0 #0e070e;
+    /*dark*/
     border-radius: 15px;
     display: flex;
     padding: 20px 20px;
-    position:relative;
+    position: relative;
     margin: 100px 0;
     z-index: 10;
     /* animation: rotate-rev 3s linear infinite; */
@@ -62,7 +68,8 @@ body {
     left: 50%;
     right: 50%;
     border-radius: 50%;
-    transform: translate(-50%, -50%); /*to center circle*/
+    transform: translate(-50%, -50%);
+    /*to center circle*/
 }
 
 .image-container {
@@ -70,10 +77,12 @@ body {
     width: 110px;
 
 }
+
 .image-container img {
-    width: inherit; /* to inheriit 110px*/
+    width: inherit;
+    /* to inheriit 110px*/
     height: 110px;
-    border-radius:50%;
+    border-radius: 50%;
     object-fit: cover;
     position: absolute;
     bottom: 0;
@@ -84,8 +93,19 @@ body {
 
 }
 
+.link {
+    text-decoration: none;
+    color: rgb(84, 81, 81);
+    background: #f8f5f8;
+    /* padding: 8PX; */
+    margin-left: 250px;
+    border-radius: 180px;
+    /* box-shadow:0 20px 20px 0 #0e070e ; */
+    padding:10px;
+}
+
 .music-container.play .img-container img {
-    animation-play-state:running;
+    animation-play-state: running;
 }
 
 
@@ -112,28 +132,28 @@ body {
     border: 0;
     color: #d8d2d8;
     padding: 10px;
-    margin:0 20px  ;
-} 
+    margin: 0 20px;
+}
 
 .action-btn-big {
     color: #b8b8bd;
     font-size: 30px;
 }
 
-.action-btn:focus{
+.action-btn:focus {
     outline: 0;
-    
+
 }
 
-.music-info{
+.music-info {
     background-color: rgba(242, 239, 239, 0.133);
     color: #fff;
-    border-radius:15px 15px 0 0 ;
+    border-radius: 15px 15px 0 0;
     position: absolute;
     top: 0;
-    left:20px;
+    left: 20px;
     width: calc(100% - 40px);
-    padding: 10px 10px 10px 150px;   
+    padding: 10px 10px 10px 150px;
     opacity: 0;
     transform: translateY(0%);
     transition: transform 0.3s ease-in opacity 0.3s;
@@ -166,7 +186,8 @@ body {
 .progress {
     background: var(--darkest);
     border-radius: 5px;
-    height: 100%; /*of its container*/
+    height: 100%;
+    /*of its container*/
     width: 0%;
     transition: width 0.1s linear;
 }
@@ -175,11 +196,10 @@ body {
 /* Happy birthday section */
 
 .happy-birthday {
-    /* background: #57012e; */
     background: #190119;
     color: #fdfbfd;
     padding: 20px;
-    font-family:cursive;
+    font-family: cursive;
     border-radius: 50px;
     margin-bottom: 150px;
 }
@@ -190,52 +210,131 @@ body {
     width: 150px;
     padding: 10px;
     border-radius: 150px;
-    animation: translate-flowerbox 3s alternate-reverse infinite;
+    animation: translate-flowerbox 5s alternate-reverse infinite;
     align-items: center;
     justify-content: center;
     margin-bottom: 50px;
 }
 
-
-.rose, span {
-    padding-left: 10px;
-    background: rgb(244, 242, 242);
+.happy-birthday #tap-wish {
+    background: #0e020e;
+    color: #e7e2e756;
+    width: 80px;
+    padding: 7px 0;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-left: 100px;
 }
 
-.special {
-    display:flex;
+#tap-wish:hover {
+    background: #0c4848;
+    width: 90px;
+    padding-left: 4px;
+    padding-left: 3px;
+    transition: 2s all linear;
+}
+
+.rose,
+span {
+    padding-left: 10px;
+    background: rgb(244, 242, 242);
+    border-radius: 535px;
 }
 
 .rolling-balls h5 {
+    position: absolute;
+    left: 0;
+    top: 0;
     background: #a993a9;
-    border-radius: 15px;
+    /* width: 20px; */
+    border-radius: 45px;
     padding: 5px;
-    animation: rotate-balls 2s alternate infinite;
-} 
-
-/* .ball0, .ball1, .ball2 , .ball3 {
-
-} */
-
-
-@keyframes translate-flowerbox {
-    from {
-        transform: translateX(180px);
-    }
-
-    /* to {
-        transform: rotate(360deg);
-    } */
+    /* animation: rotate-balls 2s alternate infinite; */
 }
 
-/*balls*/
-
-/* ball0 */
-.ball0 {
-    animation: ball0 2s alternate infinite;
+.breathing-heart {
+    font-size: 4em;
+    /* background: rgb(130, 127, 127); */
+    margin-left: 120px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    animation: breathe 3s alternate infinite;
 }
+
+/* balls */
+
+.gift {
+    /* font-size: 33em; */
+    margin-left: 300px;
+    margin-top: 400px;
+    animation: shake-gift 2s ease infinite;
+}
+
+.emoji {
+    animation: shake-emoji 2s ease infinite;
+    margin-top: 320px;
+    margin-left: 800px;
+    z-index: 11;
+}
+
+.balloon {
+    width: 100px;
+    animation: hinge-balloon 2s ease 2;
+    z-index: 55;
+}
+
+.rocket {
+    margin-top: 200px;
+    margin-left: 1100px;
+    z-index: 66;
+    animation: hinge-rocket 2s ease infinite;
+}
+
+
+
+
+
+
+
+
+
 
 /* Happy birthday section animations */
+
+@keyframes translate-flowerbox {
+    5% {
+        border-radius: 0;
+    }
+
+    20% {
+        transform: rotate(160deg);
+    }
+
+    40% {
+        transform: translateX(400px);
+        order-radius: 0;
+
+    }
+
+    70% {
+        transform: translateX(-70px);
+    }
+
+    90% {
+        transform: rotate(180deg);
+        padding: 10px;
+        order-radius: 0;
+        /* */
+    }
+
+    to {
+        /* transform: translateY(-300px);
+        opacity: 01.4; */
+        order-radius: 0;
+    }
+}
+
+
 
 /*rotate balls*/
 
@@ -249,29 +348,130 @@ body {
     }
 }
 
-/*scatter balls*/
+/* breathing heart */
 
-/*ball0*/
-@keyframes ball0 {
-    10% {
-        transform: translateX(110deg);
+
+@keyframes breathe {
+    from {
+        transform: scale(0);
     }
 
     to {
-        transform: translateX(360deg);
+        transform: scale(1.5);
     }
 }
 
 
-/*ball0*/
-@keyframes ball0 {
-    10% {
-        transform: translateX(110deg);
+/*balls*/
+
+
+/* emoji */
+
+@keyframes shake-emoji {
+
+    0%,
+    100% {
+        transform: translateX(120px);
+        /* padding: 110px; */
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateY(-10px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(10px);
+    }
+}
+
+/* gift */
+
+@keyframes shake-gift {
+    from {
+        transform: rotate(110deg);
     }
 
     to {
-        transform: translateX(360deg);
+        transform: translateX(80px);
     }
+}
+
+
+/* balloon */
+
+@keyframes hinge-balloon {
+    0% {
+        transform: rotate(0);
+        transform-origin: top left;
+        animation-timing-function: ease-in-out;
+    }
+
+    20%,
+    60% {
+        transform: rotate(80deg);
+        transform-origin: top left;
+        animation-timing-function: ease-in-out;
+    }
+
+    40% {
+        transform: rotate(60deg);
+        transform-origin: top left;
+        animation-timing-function: ease-in-out;
+    }
+
+    80% {
+        transform: rotate(60deg) translateY(0);
+        opacity: 1;
+        transform-origin: top left;
+        animation-timing-function: ease-in-out;
+    }
+
+    100% {
+        transform: translateY(700px);
+        opacity: 0;
+    }
+}
+
+/* rocket */
+@keyframes hinge-rocket {
+    0% {
+        transform: rotate(140deg);
+        transform-origin: top left;
+        animation-timing-function: ease-in-out;
+        opacity: 1;
+    }
+
+    /* 20%,
+    60% {
+        transform: rotate(80deg);
+        transform-origin: top left;
+        animation-timing-function: ease-in-out;
+    } */
+
+    /* 40% {
+        transform: rotate(60deg);
+        transform-origin: top left;
+        animation-timing-function: ease-in-out;
+    } */
+
+    80% {
+        transform: rotate(360deg) translateY(10px);
+        opacity: 1;
+        transform-origin: top left;
+        animation-timing-function: ease-in-out;
+    }
+
+    100% {
+        transform: translateY(70px);
+        opacity: 0;
+    } 
 }
 
 
